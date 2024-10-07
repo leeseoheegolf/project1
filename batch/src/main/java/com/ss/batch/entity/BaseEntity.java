@@ -25,11 +25,14 @@ public abstract class BaseEntity { //baseEntity는
 
 	// 엔티티 생성시 실행!
 	@CreatedDate 
-	@Column(nullable = false,updatable = false)
+	@Column(name ="create_at",
+			nullable = false,
+			updatable = false)
 	private LocalDateTime createAt;
 	
 	@LastModifiedDate
-	@Column(nullable = false)
+	@Column(name ="modified_at",
+			nullable = false)
 	// 업데이트 할 때만 실행!
 	private LocalDateTime modifiedAt;
 	
